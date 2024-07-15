@@ -6,11 +6,15 @@ public class SeleniumTest {
 
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
+
+        System.out.println("treœæ");
     }
 
     @Test
     public void sampleTest() {
+        int x = 1;
         System.out.println("treœæ");
     }
+
 
 }
