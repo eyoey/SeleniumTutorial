@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,7 @@ public class SeleniumTest {
     public void openGooglePage() {
         WebDriver driver = getDriver("firefox");
         driver.get("https://google.pl");
+      //  driver.quit();
     }
 
 
