@@ -1,4 +1,3 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -7,11 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-import java.util.Scanner;
+public class SeleniumTestOld {
 
-public class SeleniumTest {
-
-//  driver.get("https://www.wp.pl");
 
     @Test
     public void openGooglePage() {
