@@ -10,7 +10,7 @@ public class SeleniumTestOld {
 
 
     @Test
-    public void openGooglePage() {
+    public void openGooglePageOld() {
         WebDriver driver = getDriver("firefox");
         driver.manage().window().maximize();
         Dimension windowSize = new Dimension(600, 800);
@@ -50,5 +50,3 @@ public class SeleniumTestOld {
         }
     }
 }
-
-
