@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class SeleniumTest {
 
@@ -14,7 +15,7 @@ public class SeleniumTest {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
         driver.switchTo().frame(0);// change activity to cookie popup
         WebElement agreeButton = driver.findElement(By.xpath("//span[contains(text(),'Zaakceptuj')]"));
         agreeButton.click();
