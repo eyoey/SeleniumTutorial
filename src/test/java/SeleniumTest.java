@@ -24,9 +24,9 @@ public class SeleniumTest {
         executor.executeScript("window.open('https://www.google.pl','blank','height=300,width=333')");
         WebDriver driver1 = getDriver("chrome");
         driver1.get("https://google.pl");
-        driver.quit();  // zamyka wszystkie okna przegl¹darki
+        driver.quit();  // closing all browser windows
         driver1.quit();
-        // driver.close(); // zamyka pierwotnie otwarte okno przegl¹darki
+        // driver.close(); // closing primary browser window
     }
 
 

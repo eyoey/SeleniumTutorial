@@ -12,7 +12,7 @@ public class WenDriverManagerTest {
     public void openBrowser() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-       // options.addArguments("--headless=new"); // uruchamia test bez odpalania gui przegladarki
+       // options.addArguments("--headless=new"); // run test without browser window
         options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.ACCEPT);
         WebDriver driver = new ChromeDriver(options);
         JavascriptExecutor executor = (JavascriptExecutor) driver;
