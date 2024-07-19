@@ -16,8 +16,9 @@ public class SeleniumTest {
         driver.get("https://www.google.com");
 
 
-        driver.switchTo().frame(0);// change activity to cookie popup
-        WebElement agreeButton = driver.findElement(By.xpath("//span[contains(text(),'Zaakceptuj')]"));
+        //driver.switchTo().frame(0);// change activity to cookie popup
+       // WebElement agreeButton = driver.findElement(By.xpath("//span[contains(text(),'Zaakceptuj')]"));
+        WebElement agreeButton = driver.findElement((By.id("L2AGLb")));
         agreeButton.click();
 
         driver.switchTo().defaultContent();   // activity back to primary window
