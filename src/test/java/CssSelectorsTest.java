@@ -24,9 +24,7 @@ public class CssSelectorsTest {
 
         // je¿eli szukamy po tagu, wystarczy podaæ nazwê tagu
         By cssTag = By.cssSelector("input");
-        WebElement cssTag1 = driver.findElement(cssTag);
-        cssTag1.sendKeys("wartoœæ testowa");
-        System.out.println(cssTag);
+        driver.findElement(cssTag).sendKeys("wartoœæ testowa");
 
         // je¿eli szukamy po atrybucie np. name, href, to:
         By cssName = By.cssSelector("[name='fname']");  // name - w tym wypadku nazwa atrybutu, mo¿e te¿ byæ class
