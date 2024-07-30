@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class SelectorTest {
 
 
@@ -29,10 +31,18 @@ public class SelectorTest {
         driver.findElement(paraHidden);
 
         // lokalizowanie po tagu (tagu html)
+        By inputLocator = By.tagName("input");
+        WebElement input = driver.findElement(inputLocator); // zwróci tylko pierwszy element
+        input.sendKeys("wartoœæ testowa"); // uzupe³nia ten pierwszy znaleziony input
+        List<WebElement> inputs = driver.findElements(inputLocator); // zwróci listê elementów
+        System.out.println(inputs.size());
 
+        // lokalizowanie po treœci linka
+        By linkText = By.linkText("Visit W3Schools.com!");  // znajduje po ca³oœci tekstu
+        WebElement schoolLink = driver.findElement(linkText);
 
-
-
+        By partialText = By.partialLinkText("W3Schools");  // znajduje po fragmencie tekstu (równie¿ mo¿na zwróciæ w formie listy elementy z danym fragmentem)
+        WebElement partialLink = driver.findElement(partialText);
 
     }
 
