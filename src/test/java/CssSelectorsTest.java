@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class CssSelectorsTest {
 
     @Test
@@ -33,6 +35,31 @@ public class CssSelectorsTest {
         By cssClass2 = By.cssSelector("[class='topSecret']");
         driver.findElement(cssClass2);
 
+// znajduje element tr w tagu div
+        By ulInDiv = By.cssSelector("div ul");
+        By trInTable = By.cssSelector("table tr");
+        By trInBody = By.cssSelector("tbody tr");
+
+        driver.findElement(ulInDiv);
+        driver.findElement(trInTable);
+        driver.findElement(trInBody);
+
+// znajduje pierwsze dziecko
+        By firstChildUlInDiv = By.cssSelector("div > ul");
+        By firstChildTrInBody = By.cssSelector("tbody > tr");
+
+        driver.findElement(firstChildUlInDiv);
+        driver.findElement(firstChildTrInBody);
+
+// znajduje pierwszy 'form' po tagu label (nie dzieci/rodzic, tylko to jest ten sam poziom)
+        By firstFormAfterLabel = By.cssSelector("label + form");
+// znajduje wszystkie 'form' po tagu label
+        By allFormAfterLabel = By.cssSelector("label ~ form");
+
+        driver.findElement(firstFormAfterLabel);
+        //driver.findElement(allFormAfterLabel);
+        List<WebElement> asd = driver.findElements(allFormAfterLabel);
+        System.out.println(asd.size());
 
     }
 }
