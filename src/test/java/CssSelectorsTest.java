@@ -51,6 +51,7 @@ public class CssSelectorsTest {
         driver.findElement(firstChildUlInDiv);
         driver.findElement(firstChildTrInBody);
 
+
 // znajduje pierwszy 'form' po tagu label (nie dzieci/rodzic, tylko to jest ten sam poziom)
         By firstFormAfterLabel = By.cssSelector("label + form");
 // znajduje wszystkie 'form' po tagu label
