@@ -62,5 +62,20 @@ public class CssSelectorsTest {
         List<WebElement> asd = driver.findElements(allFormAfterLabel);
         System.out.println(asd.size());
 
+// * po atrybucie znajduje wartoœci zawieraj¹ce wpisan¹ frazê
+        By attrContainsPhrase = By.cssSelector("[name*='name']");
+// ^ po atrybucie znajduje wartoœci zaczynaj¹ce siê od wpisanej frazy
+        By attrStartsWithPhrase = By.cssSelector("[name^='fn']");
+// szukanie w danym tagu
+        By attrSearchInTag = By.cssSelector("input[name='fname']");
+// $ po atrybucie znajduje wartoœci koñcz¹ce siê wpisan¹ fraz¹
+        By attrEndsWithPhrase = By.cssSelector("[name$='ame']");
+
+        driver.findElement(attrContainsPhrase);
+        driver.findElement(attrStartsWithPhrase);
+        driver.findElement(attrSearchInTag);
+        driver.findElement(attrEndsWithPhrase);
+
+
     }
 }
